@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brand Typography */
+  font-family: 'Outfit', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Theme Color System */
+  --primary-color: #1d531f;
+  /* Navbar dark green */
+  --primary-hover: #143b16;
+  /* Deeper dark green */
+  --primary-light: #f7faf7;
+  /* Very bright, almost white green tint */
+  --primary-border: #e2ebe3;
+  /* Subtle border tint */
+
+  --accent-color: #e2a94f;
+  /* Warm gold */
+  --accent-hover: #c9933f;
+  --accent-light: #faf3e8;
+
+  --text-dark: #1e2520;
+  /* Primary text */
+  --text-muted: #5a655d;
+  /* Secondary text */
+  --text-light: #ffffff;
+
+  --bg-main: #ffffff;
+  /* Bright white background */
+  --bg-card: #ffffff;
+  /* Surface cards */
+
+  /* Spacing System */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 80px;
+
+  /* Borders & Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(29, 83, 31, 0.06);
+  --shadow-md: 0 8px 24px rgba(29, 83, 31, 0.1);
+  --shadow-lg: 0 16px 36px rgba(29, 83, 31, 0.15);
+
+  /* Transitions */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Hierarchy Scale */
+h1,
+.h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+h2,
+.h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+h3,
+.h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+h4,
+.h4 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-dark);
+}
+
+p,
+.body-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.small-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  transition: var(--transition-smooth);
+}

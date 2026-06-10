@@ -1,0 +1,33 @@
+# Node modules (both frontend & backend)
+**/node_modules/
+
+# Logs
+**/logs/
+*.log
+npm-debug.log*
+
+# Build output
+/frontend/dist/
+/frontend/build/
+/backend/dist/
+/backend/build/
+
+# Environment files
+**/.env
+**/.env.*  # e.g., .env.production, .env.development
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VSCode settings (optional)
+.vscode/
+
+# Cache
+**/.cache/
+**/.parcel-cache/
+**/coverage/
+
+# Temporary files
+*.tmp
+*.swp
