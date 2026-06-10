@@ -16,6 +16,7 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 // import PopupBanner from "./components/popup/popup.jsx";
 import AyurvedaBot from "./components/ayurvedic_bot/ayurbot.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import Disclaimer from "./pages/Disclaimer/Disclaimer.jsx";
 import { useLocation } from "react-router-dom";
 
 // Dynamic SEO page metadata handler
@@ -83,6 +84,19 @@ function SEOHandler() {
 }
 
 function App() {
+  const [disclaimerAccepted, setDisclaimerAccepted] = React.useState(() => {
+    return localStorage.getItem("disclaimerAccepted") === "true";
+  });
+
+  const handleAccept = () => {
+    localStorage.setItem("disclaimerAccepted", "true");
+    setDisclaimerAccepted(true);
+  };
+
+  if (!disclaimerAccepted) {
+    return <Disclaimer onAccept={handleAccept} />;
+  }
+
   return (
     <UserProvider>
       <Router>
@@ -110,3 +124,4 @@ function App() {
 }
 
 export default App;
+
