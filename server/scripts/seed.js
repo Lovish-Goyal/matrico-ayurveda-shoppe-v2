@@ -15,8 +15,6 @@ async function seed() {
     console.log("Connecting to MongoDB at:", MONGO_URI);
     await mongoose.connect(MONGO_URI, {
       dbName: "matrico_ayurveda_shoppee",
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
     });
     console.log("MongoDB connected.");
 

@@ -52,8 +52,6 @@ app.post("/contact", async (req, res) => {
 mongoose
   .connect(MONGO_URI, {
     dbName: "matrico_ayurveda_shoppee",
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
   })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err.message));
